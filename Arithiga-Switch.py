@@ -18,7 +18,7 @@ class GalagaVariant: # tentative title
 
         pygame.mixer.init()
 
-        pygame.display.set_caption("To Be Titled") # Will have an official title later
+        pygame.display.set_caption("Arithiga")
 
         self.screen = pygame.display.set_mode((640,480),0,32)
 
@@ -263,7 +263,7 @@ class GalagaVariant: # tentative title
         # Creates objects for each number
         self.number_objects = []
 
-        for number in range(0,10):
+        for number in range(1,10):
 
             image = self.final_number_font.render(str(number), True, self.chosen_number_colors[number])
             new_number = Numbers(self.screen, image, number, False)
@@ -339,7 +339,7 @@ class GalagaVariant: # tentative title
 
         font = pygame.font.SysFont('impact', 40)
 
-        text = font.render("To Be Titled", True, (200, 50, 0))
+        text = font.render("Arithiga", True, (200, 50, 0))
 
         self.screen.blit(text, (250, 50))
 
@@ -502,7 +502,6 @@ class GalagaVariant: # tentative title
 
                         if (not self.number_objects[random_value].moving()):
                             self.number_objects[random_value].setXPosition(start_position_number)
-                            self.moving_numbers.add(self.number_objects[random_value])
                             self.number_objects[random_value].toggle()
 
                         self.x_positions.append(start_position_number)
